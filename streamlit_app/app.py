@@ -236,18 +236,5 @@ elif page == "🔮 Real-Time Prediction":
             pd.DataFrame({"lat": [lat], "lon": [lon]})
         ]))
 
-# ==================================================
-# 📈 MLFLOW
-# ==================================================
-elif page == "📈 MLflow Experiments":
-    st.title("📈 MLflow Monitoring")
 
-    run = get_best_clustering_run()
-    if run:
-        st.metric("Best Silhouette", f"{run['silhouette_score']:.3f}")
-        st.write("Algorithm:", run["algorithm"])
-        st.write("Clusters:", run["n_clusters"])
 
-    pca = get_pca_run()
-    if pca:
-        st.metric("PCA Variance", f"{pca['explained_variance']:.2%}")
