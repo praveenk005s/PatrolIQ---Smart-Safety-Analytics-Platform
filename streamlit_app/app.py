@@ -132,8 +132,7 @@ page = st.sidebar.radio(
         "🏠 Overview",
         "📊 Exploratory Analysis",
         "📍 Crime Hotspots",
-        "🔮 Real-Time Prediction",
-        "📈 MLflow Experiments"
+        "🔮 Real-Time Prediction"
     ]
 )
 
@@ -235,6 +234,7 @@ elif page == "🔮 Real-Time Prediction":
             )[["lat", "lon"]],
             pd.DataFrame({"lat": [lat], "lon": [lon]})
         ]))
+
 
 
 
